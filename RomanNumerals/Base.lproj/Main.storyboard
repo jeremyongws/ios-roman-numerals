@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number here plz." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6m2-Gy-qpg">
+                                <rect key="frame" x="200" y="121" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3oj-N7-WAm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-Kf-TVh">
+                                <rect key="frame" x="263" y="191" width="75" height="30"/>
+                                <state key="normal" title="Numeralify"/>
+                                <connections>
+                                    <action selector="onNumeralifyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ClO-gY-qK1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Roman Numeralify Numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chg-yz-UH1">
+                                <rect key="frame" x="193" y="60" width="215" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2HY-Jj-wPS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghw-K2-13B">
+                                <rect key="frame" x="200" y="261" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="xMx-Zw-iVl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ghw-K2-13B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EBd-OI-zck"/>
+                            <constraint firstItem="chg-yz-UH1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="GgI-pf-xwr"/>
+                            <constraint firstItem="Xum-Kf-TVh" firstAttribute="top" secondItem="6m2-Gy-qpg" secondAttribute="bottom" constant="40" id="H7e-Eq-png"/>
+                            <constraint firstItem="6m2-Gy-qpg" firstAttribute="top" secondItem="chg-yz-UH1" secondAttribute="bottom" constant="40" id="Hmi-2t-SLH"/>
+                            <constraint firstItem="Xum-Kf-TVh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OKQ-rX-fKT"/>
+                            <constraint firstItem="chg-yz-UH1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rug-Oo-6tQ"/>
+                            <constraint firstItem="ghw-K2-13B" firstAttribute="top" secondItem="Xum-Kf-TVh" secondAttribute="bottom" constant="40" id="YMn-sw-jPV"/>
+                            <constraint firstItem="6m2-Gy-qpg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="opg-Qv-Ycf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="convertedNumber" destination="ghw-K2-13B" id="1Hg-2N-8UO"/>
+                        <outlet property="numberField" destination="6m2-Gy-qpg" id="GW0-ty-x85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
